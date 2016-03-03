@@ -1,0 +1,18 @@
+server:
+  port: 0
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${EUREKA_PORT_8761_TCP_ADDR}:8761/eureka/
+  instance:
+    preferIpAddress: true
+
+mongo:
+  uri: mongodb://localhost:27017
+  databaseName: raven
+
+management:
+  health:
+    mongo:
+      enabled: false

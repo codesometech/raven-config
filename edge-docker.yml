@@ -1,0 +1,15 @@
+server:
+  port: 8084
+
+eureka:
+  client:
+    registryFetchIntervalSeconds: 5
+  serviceUrl:
+    defaultZone: http://${EUREKA_PORT_8761_TCP_ADDR}:8761/eureka
+
+zuul:
+  routes:
+    tenants:
+      path: /user/**
+      serviceId: user
+      stripPrefix: true

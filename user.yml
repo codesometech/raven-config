@@ -1,0 +1,21 @@
+server:
+  port: 0
+
+eureka:
+  client:
+    registryFetchIntervalSeconds: 5
+  serviceUrl:
+    defaultZone: http://localhost:8761/eureka/
+
+mongo:
+  uri: mongodb://192.168.99.100:32773
+  databaseName: raven
+
+#  boot:
+#    admin:
+#      url: http://localhost:8090
+
+management:
+  health:
+    mongo:
+      enabled: false
