@@ -4,6 +4,8 @@ server:
 eureka:
   client:
     registryFetchIntervalSeconds: 5
+  instance:
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   serviceUrl:
     defaultZone: http://localhost:8761/eureka/
 
